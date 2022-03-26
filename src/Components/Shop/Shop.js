@@ -6,8 +6,6 @@ const Shop = () => {
 
     const [products, setProducts] = useState([]);
     const [cart, setCart] = useState([]);
-    const [click, setClick] = useState([products]);
-    console.log(click);
     useEffect(() => {
         fetch('products.json')
             .then(response => response.json())
@@ -32,7 +30,7 @@ const Shop = () => {
             }
             </div>
             <div className="order-container">
-                <Order  cart={cart}></Order>
+                <Order setCart={setCart}  cart={cart}></Order>
             </div>
             
             

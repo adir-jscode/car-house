@@ -1,21 +1,16 @@
 import React, { useState } from 'react';
 import ShowOrder from '../ShowOrder/ShowOrder';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import {faCheck,faArrowRotateRight} from '@fortawesome/free-solid-svg-icons'
 import './Order.css'
 
 const Order = ({ cart,setCart }) => {
-    // const [click, setClick] = useState([props.product]);
-    // console.log(click);
-    const [count, setCount] = useState(0);
-    if (cart.length > 4) {
-        setCart(0);
-        break;
-    }
-    let name;
-    let image;
-    for (const product of cart) {
-        console.log(product);
-        name = product.name;
-        image = product.picture;
+    // const [count, setCount] = useState(0);
+    // if (cart.length > 4) {
+    //     setCount(0);
+    // }
+    function chooseAgain() {
+        setCart([]);
     }
     return (
         <div>
@@ -26,7 +21,18 @@ const Order = ({ cart,setCart }) => {
                 {
                 cart.map(order =><ShowOrder key={order._id} order={order}></ShowOrder>)
                 }
-                <button>Choose 1 for me</button>
+                <button className="choose-btn">
+                    <p>Choose 1 for me </p>
+                    
+                    <FontAwesomeIcon style={{marginLeft:'10px'}} icon={faCheck}></FontAwesomeIcon>
+                
+                </button>
+                 <button onClick={chooseAgain} className="choose-again">
+                    <p>Choose Again </p>
+                    
+                    <FontAwesomeIcon style={{marginLeft:'10px'}} icon={faArrowRotateRight}></FontAwesomeIcon>
+                
+                </button>
             </div>
             
             {/* <p>{name}</p>

@@ -15,7 +15,7 @@ const Product = (props) => {
             <p>price: {balance}</p>
             
             
-            <button style={{ textAlign: 'center'}}onClick={() => handleProducts(props.product)} className="cart-btn">
+            <button style={{ textAlign: 'center'}}onClick={() => handleProducts(props.product) } className="cart-btn">
                 <p>Add To Cart</p>
                 <FontAwesomeIcon icon={faShoppingCart} ></FontAwesomeIcon>
             

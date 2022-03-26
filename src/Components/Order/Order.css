@@ -1,3 +1,28 @@
 .order-summary {
   background-color: #ffe0b3;
 }
+.choose-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  background-color: green;
+  color: white;
+  padding: 10px 5px;
+  border-radius: 5px;
+  width: 50%;
+  margin: 0 auto;
+}
+.choose-again {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  background-color: red;
+  color: white;
+  padding: 10px 5px;
+  border-radius: 5px;
+  width: 50%;
+  margin: 0 auto;
+  margin-top: 10px;
+}
