@@ -3,10 +3,10 @@ import Order from '../Order/Order';
 import Product from '../Product/Product';
 import './Shop.css'
 const Shop = () => {
-
     const [products, setProducts] = useState([]);
     const [cart, setCart] = useState([]);
-    const [count,setCount] = useState(0);
+    const [count, setCount] = useState(0);
+    
     useEffect(() => {
         fetch('products.json')
             .then(response => response.json())
@@ -16,6 +16,7 @@ const Shop = () => {
     const handleProducts = (products) => {
         const newCart = [...cart, products];
         if (cart.length >= 4) {
+            alert('You can select only 4 cars')
             setCount(0);
         }
         else{

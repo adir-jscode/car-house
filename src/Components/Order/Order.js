@@ -9,7 +9,20 @@ const Order = ({ cart,setCart }) => {
     // if (cart.length > 4) {
     //     setCount(0);
     // }
+    // console.log(cart[0]);
+    // const random = Math.random(cart[]);
+    // console.log(random);
     
+    const random = cart[Math.floor(Math.random() * cart.length)];
+    console.log(random);
+    // const productRandom = []
+    
+    function randomElement() {
+        console.log(random,'click');
+        // const randomElement = cart[Math.floor(Math.random() * cart.length)];
+        // const select =productRandom.push(random)
+        setCart([random]);
+    }
     function chooseAgain() {
         setCart([]);
     }
@@ -22,7 +35,8 @@ const Order = ({ cart,setCart }) => {
                 {
                 cart.map(order =><ShowOrder key={order._id} order={order}></ShowOrder>)
                 }
-                <button className="choose-btn">
+
+                <button onClick={randomElement} className="choose-btn">
                     <p>Choose 1 for me </p>
                     
                     <FontAwesomeIcon style={{marginLeft:'10px'}} icon={faCheck}></FontAwesomeIcon>
