@@ -1,4 +1,16 @@
 .product {
-  background-color: gray;
   padding: 20px;
+  border: 1px solid lightgrey;
+}
+.cart-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  background-color: #ff9900;
+  color: white;
+  padding: 0 5px;
+  border-radius: 5px;
+  width: 50%;
+  margin: 0 auto;
 }
