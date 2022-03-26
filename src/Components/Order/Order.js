@@ -10,7 +10,13 @@ const Order = ({ cart,setCart }) => {
 
     
     function randomElement() {
-        setCart([random]);
+        if (random) {
+         setCart([random]);    
+        }
+        else {
+            setCart([]);
+        }
+        
     }
     function chooseAgain() {
         setCart([]);
@@ -26,7 +32,7 @@ const Order = ({ cart,setCart }) => {
                 }
 
                 <button onClick={randomElement} className="choose-btn">
-                    <p>Choose 1 for me </p>
+                    <p>Choose One</p>
                     
                     <FontAwesomeIcon style={{marginLeft:'10px'}} icon={faCheck}></FontAwesomeIcon>
                 

@@ -15,35 +15,25 @@ const Shop = () => {
         .then(data=>setProducts(data))
     }, [])
     
-    function findProducts(cart) {
-        const duplicate = [];
-    for (var i = 0; i < cart.length; i++) {
-        const element = cart[i];
-        if (duplicate.indexOf(element) == -1) {
-            duplicate.push(element);
-        }
-    }
-    return duplicate;
-    }
-
-    const result = findProducts(cart);
-    console.log(result);
+  
 
     const handleProducts = (products) => {
         const newCart = [...cart, products];
-        if (cart.length >= 4 ) {
+        let exits = cart.find(cart => cart._id === products._id);
+        console.log(typeof (exits));
+        if(exits) {
+            alert('Please Select Another Car');
+            setCart({});
+            
+        }
+        
+        if (cart.length >= 4) {
             alert('You can select only 4 cars')
             setCount(0);
         }
-        else{
+        else {
             setCart(newCart);
         }
-
-        if (cart._id === products._id) {
-            alert('Please select')
-            setCart(newCart);
-        }
-
         
         
        
@@ -58,7 +48,7 @@ const Shop = () => {
                     key={product._id}
                     product={product}
                     handleProducts={handleProducts}
-                    findProducts={findProducts}
+    
                 ></Product>)
             }
             </div>
