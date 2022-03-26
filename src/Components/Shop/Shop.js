@@ -22,7 +22,7 @@ const Shop = () => {
             }
             </div>
             <div className="order-container">
-                <h1>Orde</h1>
+                <h1>Order</h1>
             </div>
             
             
