@@ -2,11 +2,23 @@
   display: flex;
   margin: 20px 0px;
 }
-.show-order-img {
-}
+
 .show-order-info {
   display: flex;
   justify-content: center;
   align-items: center;
   margin-left: 10px;
 }
+
+/* @media screen and (max-width: 688px) {
+  .show-order-container {
+    border: 1px solid red;
+    width: 50%;
+    display: block;
+    justify-content: center;
+    margin: 0 auto;
+    padding: 0;
+  }
+  .show-order-img img {
+  }
+} */

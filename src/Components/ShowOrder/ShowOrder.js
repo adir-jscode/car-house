@@ -5,7 +5,6 @@ import {faTrash} from '@fortawesome/free-solid-svg-icons'
 
 const ShowOrder = (props) => {
     const {picture,balance,name} = props.order;
-    console.log(typeof (props.order));
     return (
         <div className="show-order-container">
              <div className="show-order-img">

@@ -5,22 +5,11 @@ import {faCheck,faArrowRotateRight} from '@fortawesome/free-solid-svg-icons'
 import './Order.css'
 
 const Order = ({ cart,setCart }) => {
-    // const [count, setCount] = useState(0);
-    // if (cart.length > 4) {
-    //     setCount(0);
-    // }
-    // console.log(cart[0]);
-    // const random = Math.random(cart[]);
-    // console.log(random);
     
     const random = cart[Math.floor(Math.random() * cart.length)];
-    console.log(random);
-    // const productRandom = []
+
     
     function randomElement() {
-        console.log(random,'click');
-        // const randomElement = cart[Math.floor(Math.random() * cart.length)];
-        // const select =productRandom.push(random)
         setCart([random]);
     }
     function chooseAgain() {
