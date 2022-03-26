@@ -31,13 +31,19 @@ const Shop = () => {
 
     const handleProducts = (products) => {
         const newCart = [...cart, products];
-        if (cart.length >= 4) {
+        if (cart.length >= 4 ) {
             alert('You can select only 4 cars')
             setCount(0);
         }
         else{
             setCart(newCart);
         }
+
+        if (cart._id === products._id) {
+            alert('Please select')
+            setCart(newCart);
+        }
+
         
         
        
