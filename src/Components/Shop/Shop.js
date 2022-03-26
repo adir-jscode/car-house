@@ -6,6 +6,7 @@ const Shop = () => {
 
     const [products, setProducts] = useState([]);
     const [cart, setCart] = useState([]);
+    const [count,setCount] = useState(0);
     useEffect(() => {
         fetch('products.json')
             .then(response => response.json())
@@ -13,8 +14,14 @@ const Shop = () => {
     }, [])
     
     const handleProducts = (products) => {
-        const newCart = [...cart,products];
-        setCart(newCart);
+        const newCart = [...cart, products];
+        if (cart.length >= 4) {
+            setCount(0);
+        }
+        else{
+            setCart(newCart);
+        }
+        
        
     }
     return (

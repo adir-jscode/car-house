@@ -1,0 +1,12 @@
+.show-order-container {
+  display: flex;
+  margin: 20px 0px;
+}
+.show-order-img {
+}
+.show-order-info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 10px;
+}
