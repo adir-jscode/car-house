@@ -4,7 +4,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {faTrash} from '@fortawesome/free-solid-svg-icons'
 
 const ShowOrder = (props) => {
-    const {picture,balance,name} = props.order;
+    const { picture, balance, name } = props.order;
+    
     return (
         <div className="show-order-container">
              <div className="show-order-img">
@@ -19,9 +20,7 @@ const ShowOrder = (props) => {
                 <p>{balance}</p>
                 </div>
                 
-                {/* <div style={{marginLeft: "15px"}}>
-                  <FontAwesomeIcon icon={faTrash} ></FontAwesomeIcon>
-                </div> */}
+                
                  
             </div>
         </div>

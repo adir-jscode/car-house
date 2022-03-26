@@ -19,13 +19,12 @@ const Shop = () => {
 
     const handleProducts = (products) => {
         const newCart = [...cart, products];
-        let exits = cart.find(cart => cart._id === products._id);
-        console.log(typeof (exits));
-        if(exits) {
-            alert('Please Select Another Car');
-            setCart({});
+        // let exits = cart.find(cart => cart._id === products._id);
+        // if(exits) {
+        //     alert('Please Select Another Car');
+        //     setCart({});
             
-        }
+        // }
         
         if (cart.length >= 4) {
             alert('You can select only 4 cars')

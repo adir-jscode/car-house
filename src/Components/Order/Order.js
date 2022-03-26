@@ -5,8 +5,8 @@ import {faCheck,faArrowRotateRight} from '@fortawesome/free-solid-svg-icons'
 import './Order.css'
 
 const Order = ({ cart,setCart }) => {
-    
     const random = cart[Math.floor(Math.random() * cart.length)];
+    
 
     
     function randomElement() {
@@ -45,9 +45,6 @@ const Order = ({ cart,setCart }) => {
                 </button>
             </div>
             
-            {/* <p>{name}</p>
-            <img style={{ width: '100px' }} src={image} alt="" />
-            <br /> */}
             
         </div>
     );

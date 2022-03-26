@@ -1,7 +1,6 @@
 
 import './App.css';
 import Footer from './Components/Footer/Footer';
-import Order from './Components/Order/Order';
 import Shop from './Components/Shop/Shop';
 
 function App() {

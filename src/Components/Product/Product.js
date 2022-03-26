@@ -4,8 +4,6 @@ import {faShoppingCart} from '@fortawesome/free-solid-svg-icons'
 import './Product.css'
 
 const Product = (props) => {
-    // const [click, setClick] = useState([props.product]);
-    // console.log(click);
     const { name, picture, balance } = props.product;
     const { handleProducts } = props;
     return (
