@@ -4,8 +4,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {faTrash} from '@fortawesome/free-solid-svg-icons'
 
 const ShowOrder = (props) => {
-    const { picture, balance, name } = props.order;
-    
+    const { _id,picture, balance, name } = props.order;
+    const { handleDelete } = props;
     return (
         <div className="show-order-container">
              <div className="show-order-img">
@@ -17,7 +17,8 @@ const ShowOrder = (props) => {
             <div className="show-order-info">
                 <div>
                     <h4>{ name}</h4>
-                <p>{balance}</p>
+                    <p>{balance}</p>
+                    <button onClick={() =>handleDelete(props.order)}>Delete</button>
                 </div>
                 
                 

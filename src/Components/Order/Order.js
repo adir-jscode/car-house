@@ -4,9 +4,15 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {faCheck,faArrowRotateRight} from '@fortawesome/free-solid-svg-icons'
 import './Order.css'
 
-const Order = ({ cart,setCart }) => {
+const Order = ({ cart, setCart,handleDelete }) => {
     const random = cart[Math.floor(Math.random() * cart.length)];
     
+    // const handleDelete = (id) => {
+
+    //     const newList = cart.map(item => item.id !== id);
+    //     setCart(newList);
+    // }
+
 
     
     function randomElement() {
@@ -28,7 +34,7 @@ const Order = ({ cart,setCart }) => {
                 <h1>Order Summary</h1>
                 <h5>Selected Items: {cart.length}</h5>
                 {
-                cart.map(order =><ShowOrder key={order._id} order={order}></ShowOrder>)
+                cart.map(order =><ShowOrder key={order._id} order={order} handleDelete={handleDelete}  ></ShowOrder>)
                 }
 
                 <button onClick={randomElement} className="choose-btn">

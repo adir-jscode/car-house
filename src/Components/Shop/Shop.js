@@ -6,6 +6,10 @@ const Shop = () => {
     const [products, setProducts] = useState([]);
     const [cart, setCart] = useState([]);
     const [count, setCount] = useState(0);
+    for (const id of cart) {
+        console.log(id._id);   
+    }
+   
 
 
     
@@ -15,21 +19,51 @@ const Shop = () => {
         .then(data=>setProducts(data))
     }, [])
     
+    // function selectOne(item) {
+    //     if (item in cart) {
+    //         cart[item] = " ";
+    //     }
+    //     else {
+    //         setCart([item])
+    //     }
+    // }
   
+    const handleDelete = (item) => {
+        console.log(item);
+        const filterCar = cart.filter(car => car._id !== item._id);
+        setCart(filterCar);
+    }
 
     const handleProducts = (products) => {
         const newCart = [...cart, products];
-        // let exits = cart.find(cart => cart._id === products._id);
-        // if(exits) {
-        //     alert('Please Select Another Car');
-        //     setCart({});
-            
+        console.log(products);
+
+        // Don't Show multiple products using map & find
+        let exits = cart.find(cart => cart._id === products._id);
+        if (exits) {
+            alert('Please Select Another Car');
+            return exits;
+        }
+        // console.log(cart._id);
+        // let item = {}
+
+        
+        // Don't Show multiple products using basic loop
+
+        // for (const cartId of cart) {
+        //     if (cartId._id === products._id) {
+        //         alert('Please Select Another Car');
+        //         return cartId;
+        //     }
         // }
+        
+        
         
         if (cart.length >= 4) {
             alert('You can select only 4 cars')
             setCount(0);
         }
+
         else {
             setCart(newCart);
         }
@@ -52,7 +86,7 @@ const Shop = () => {
             }
             </div>
             <div className="order-container">
-                <Order setCart={setCart}  cart={cart}></Order>
+                <Order setCart={setCart} handleDelete={handleDelete}  cart={cart}></Order>
             </div>
             
             
