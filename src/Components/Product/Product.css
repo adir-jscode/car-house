@@ -1,5 +1,5 @@
 .product {
-  padding: 20px;
+  padding: 10px;
   border: 1px solid lightgrey;
 }
 .cart-btn {
@@ -9,8 +9,17 @@
   border: none;
   background-color: #ff9900;
   color: white;
-  padding: 0 5px;
+  padding: 0px;
   border-radius: 5px;
   width: 50%;
   margin: 0 auto;
+}
+
+@media screen and (max-width: 688px) {
+  product {
+    width: 100%;
+    padding: 0px;
+    margin: 0;
+    border: 1px solid lightgrey;
+  }
 }

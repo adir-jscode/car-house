@@ -1,22 +1,22 @@
 .show-order-container {
   display: flex;
+  justify-content: center;
   margin: 20px 0px;
-  border: 1px solid yellow;
 }
 
 .show-order-info {
   display: flex;
-  /* flex-direction: column;
-  justify-content: center;
-  align-items: center; */
-  border: 1px solid red;
+
   margin-left: 10px;
+}
+
+.text-info {
+  width: 150px;
 }
 .button-delete {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-left: 30px;
 }
 .delete-btn {
   background-color: red;

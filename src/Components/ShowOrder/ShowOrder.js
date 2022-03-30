@@ -1,5 +1,7 @@
 import React from 'react';
 import './ShowOrder.css';
+import { Acad } from '@heroicons/react/solid'
+
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {faTrash} from '@fortawesome/free-solid-svg-icons'
 
@@ -15,12 +17,13 @@ const ShowOrder = (props) => {
             </div>
             
             <div className="show-order-info">
-               <div>
+               <div className="text-info">
                         <h4>{ name}</h4>
                     <p>{balance}</p>
 
                     </div>
                 <div className="button-delete">
+                   
                     
                         <button className="delete-btn"onClick={() =>handleDelete(props.order)}>Delete</button>
                     </div>

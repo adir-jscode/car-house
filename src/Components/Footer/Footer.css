@@ -1,0 +1,17 @@
+@media screen and (max-width: 688px) {
+  .footer-section {
+    display: block;
+    width: 100%;
+    padding: 0px;
+    margin: 0px;
+  }
+}
+
+@media only screen and (min-width: 689px) and (max-width: 992px) {
+  .footer-section {
+    display: block;
+    width: 100%;
+    padding: 0px;
+    margin: 0px;
+  }
+}
