@@ -10,16 +10,22 @@ const ShowOrder = (props) => {
         <div className="show-order-container">
              <div className="show-order-img">
 
-                <img style={{ width: '120px', borderRadius: '10px' }} src={picture} alt="" />
+                <img style={{ width: '120px',borderRadius: '10px',marginTop: '20px' }} src={picture} alt="" />
                 
             </div>
             
             <div className="show-order-info">
-                <div>
-                    <h4>{ name}</h4>
+               <div>
+                        <h4>{ name}</h4>
                     <p>{balance}</p>
-                    <button onClick={() =>handleDelete(props.order)}>Delete</button>
-                </div>
+
+                    </div>
+                <div className="button-delete">
+                    
+                        <button className="delete-btn"onClick={() =>handleDelete(props.order)}>Delete</button>
+                    </div>
+                    
+            
                 
                 
                  

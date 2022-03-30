@@ -1,14 +1,37 @@
 .show-order-container {
   display: flex;
   margin: 20px 0px;
+  border: 1px solid yellow;
 }
 
 .show-order-info {
   display: flex;
+  /* flex-direction: column;
   justify-content: center;
-  align-items: center;
+  align-items: center; */
+  border: 1px solid red;
   margin-left: 10px;
 }
+.button-delete {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-left: 30px;
+}
+.delete-btn {
+  background-color: red;
+  text-decoration: none;
+  padding: 10px 20px;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+/* .delete-btn:hover {
+  background-color: indigo;
+  color: red;
+} */
 
 /* @media screen and (max-width: 688px) {
   .show-order-container {
